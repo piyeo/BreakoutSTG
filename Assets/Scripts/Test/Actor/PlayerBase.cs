@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public abstract class PlayerBase
+public class PlayerBase : MonoBehaviour
 {
-    public virtual void Move()
-    {
-
-    }
-    //Move:範囲を超えたら収める
+    //パラメータ
+    //体力系、移動系
+    //画面外処理系
 }

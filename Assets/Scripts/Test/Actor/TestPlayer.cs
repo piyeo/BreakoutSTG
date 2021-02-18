@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class TestCharacter : PlayerBase
+public class TestPlayer : PlayerBase
 {
-
+    //スキルなど
 }

@@ -3,12 +3,14 @@ using UnityEngine.EventSystems;
 
 public class BattleFieldInput : InputTestBase, IDragHandler
 {
-    public ActorBase player;
+    private PlayerManager playerManager;
+
     void Start()
     {
+        playerManager = transform.root.gameObject.GetComponent<PlayerManager>();
     }
     public void OnDrag(PointerEventData data)
 	{
-		player.AddPosition(new Vector3(data.delta.x * 0.01f, data.delta.y * 0.01f, 0f));
+		playerManager.Move(data.delta.x * 0.01f, data.delta.y * 0.01f);
 	}
 }

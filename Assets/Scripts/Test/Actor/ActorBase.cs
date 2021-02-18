@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-public sealed class ActorBase : MonoBehaviour
+public class ActorBase : MonoBehaviour
 {
     private GameObject Obj;
     private Transform Trans;
-    private bool IsActive;
+    private bool IsActive = false;
 
     public void Init()
     {
@@ -28,8 +28,14 @@ public sealed class ActorBase : MonoBehaviour
     {
         this.Trans.position = _vector3;
     }
-    public void AddPosition(Vector3 _vector3)
+
+    public Vector3 GetPosition()
     {
-        this.Trans.position += _vector3;
+        return this.Trans.position;
+    }
+
+    public void AddPosition(float _x, float _y)
+    {
+        this.Trans.position += new Vector3(_x, _y, 0f);
     }
 }
